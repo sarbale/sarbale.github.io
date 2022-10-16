@@ -1,3 +1,26 @@
+<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+
+
+<script>
+function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}
+
+window.addEventListener("scroll", reveal);
+</script>
+
 <section>
   <h1>sashaa / centerepic  |  lego exploiting since 2020</h1>
   <h3>probably going to move to other things since synapse x is going subscribption</h3>
